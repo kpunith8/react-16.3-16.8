@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import ErrorBoundary from './ErrorBoundary'
 import BuggyCounter from './BuggyCounter'
 

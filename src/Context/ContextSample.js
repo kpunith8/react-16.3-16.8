@@ -1,13 +1,13 @@
 import React, { Component, createContext } from 'react';
 
-const ThemeContext = createContext("blue");
+const ThemeContext = createContext("red");
 const { Provider, Consumer } = ThemeContext;
 
-class ContextExample extends Component
+class ContextSample extends Component
 {
   render() {
     return(
-      <Provider value='blue'>
+      <Provider value='red'>
         <Toolbar />
       </Provider>
     );
@@ -29,4 +29,4 @@ const ThemedButton = (props) => {
   );
 };
 
-export default ContextExample;
+export default ContextSample;

@@ -3,17 +3,17 @@ import React, { Component, createContext } from 'react';
 export const themes = {
   light: {
     foreground: '#000000',
-    background: '#eeeeee',
+    background: '#65ef66',
   },
   dark: {
     foreground: '#ffffff',
-    background: '#222222',
+    background: '#848fff',
   },
 };
 
 const ThemeContext = createContext({
   theme: themes.dark,
-  toggleTheme: () => {},
+  toggleTheme: () => { },
 });
 
 const { Provider, Consumer } = ThemeContext;
@@ -54,15 +54,15 @@ class NestedContext extends Component {
 const Content = () => {
   return (
     <div>
-     <Consumer>
-      {({theme, toggleTheme}) => (
-        <button
-          onClick={toggleTheme}
-          style={{backgroundColor: theme.background}}>
-          Toggle Theme
+      <Consumer>
+        {({ theme, toggleTheme }) => (
+          <button
+            onClick={toggleTheme}
+            style={{ backgroundColor: theme.background }}>
+            Toggle Theme
         </button>
-      )}
-    </Consumer>
+        )}
+      </Consumer>
     </div>
   );
 }
